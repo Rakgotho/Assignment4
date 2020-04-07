@@ -25,6 +25,8 @@ public class Collections
     }
     @Test
     public void Map()
+            //Mapping
+
     {
         Map<String,String > mp = new HashMap<>();
         mp.put("Name: ", "Abram");
