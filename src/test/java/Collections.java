@@ -1,83 +1,85 @@
 import org.junit.Test;
+import org.junit.runners.Suite;
 
 import java.util.*;
 
+//import java.util.*;
+
 public class Collections
 {
+
     @Test
-    public void Collect()
+    public void apple()
     {
-        Collection value = new ArrayList();
-
-          value.add(5);
-          value.add("Abram");
-          value.add(4.3);
-
-
-        for(Object i: value)
-        {
-
-            System.out.println(i);
-
-        }
-
+        //Performing collection action
+        // This method will have to be deemed as collection do not have usable implementation of collecttion
+        // interface.
 
     }
     @Test
-    public void Map()
-            //Mapping
-
+    public void orange()
     {
-        Map<String,String > mp = new HashMap<>();
-        mp.put("Name: ", "Abram");
-        mp.put("Surname: ", "Rakgotho");
-        mp.put("Module: ", "ADP3");
+        //performing mapping activity
+        Map mp=new HashMap();
+        //Adding elements to map
+        mp.put(1,"Abram");
+        mp.put(8,"RAKGOTHO");
+        mp.put(2,"LEBUSA");
 
-        Set<String> keys = mp.keySet();
+        //Traversing Map
+        Set set = mp.entrySet();//  ENABLING TRANVERSE
+        Iterator itr = set.iterator();
 
-           for(String key: keys)
+        while(itr.hasNext()){
+            //Converting to Map.Entry so that we can get key and value separately
 
-           {
-               System.out.println(key +" "+ mp.get(key));
-           }
-
+            Map.Entry entry=(Map.Entry)itr.next();
+            //Here im obtaining a key and a value
+            System.out.println(entry.getKey()+" "+entry.getValue());
+            //System.out.println(itr.next()); //Doing only this will get the  key and values as assignment
+        }
 
 
 
     }
     @Test
-    public void Set()
+    public void pineapple()
     {
-        Set<String> st = new TreeSet<>();
-        st.add("Course");
-        st.add("Group");
-        st.add("module");
+        //performing Setting activity
+        HashSet<String> set = new HashSet<String>();
+        set.add("Abram");
+        set.add("Abram");
+        set.add("Lebusa");
+        set.add("Tryphina");
 
-        for(String s:st)
+        Iterator<String> itr = set.iterator();
+        while (itr.hasNext())
         {
-            System.out.println(s);
-
+            System.out.println(itr.next());
         }
 
 
     }
     @Test
-    public void list()
+    public void pawpaw()
     {
-        List<Integer> val = new ArrayList<Integer>();
+        //performing List collection
 
-            val.add(10);
-            val.add(6);
-            val.add(3);
-            val.add(2);
+        List<String> lst = new ArrayList<>();
+        //Now adding list to my arraylist
+        lst.add("Arinze");
+        lst.add("Abram");
+        lst.add("Lebusa");
+        lst.add("Sanele");
 
-
-        for(int i: val)
+        for(String display:lst)
         {
 
-            System.out.println(i);
-
+            System.out.println(display);
         }
+
 
     }
 }
+
+
